@@ -1,0 +1,5 @@
+require 'wahrung/configuration'
+require 'wahrung/arithmetic'
+require 'wahrung/comparison'
+require 'wahrung/money'
+require 'wahrung/version'
