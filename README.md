@@ -1,8 +1,6 @@
 # Währung
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/wahrung`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Handles different currency conversions, arithmetic operations and stuff.
 
 ## Installation
 
@@ -65,6 +63,18 @@ fifty_eur_in_usd == fifty_eur # => true
 
 twenty_dollars > Money.new(5, 'USD') # => true
 twenty_dollars < fifty_eur           # => true
+```
+
+You can set a default currency and handle the conversions within the configure method:
+
+```ruby
+Money.configure do |config|
+  config.default_currency = 'EUR'
+  config.conversions = {
+    'USD'     => 1.11,
+    'Bitcoin' => 0.0047
+  }
+end
 ```
 
 ## Development
