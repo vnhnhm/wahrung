@@ -9,3 +9,5 @@ void_context_variable = nil
 def redundant_return
   return
 end
+
+@@unneeded_class_variable = nil
